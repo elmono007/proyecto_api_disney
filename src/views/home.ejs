@@ -15,7 +15,7 @@
 <body class="body_container">
     <header class="header_container">
         <div class="header_container_elem1">
-            <h1>~ Disney API Characters ~</h1>
+            <h1>~ Disney Characters ~</h1>
         </div>
     </header>
     <hr>
@@ -30,13 +30,18 @@
             <div class="navButton"><a href="/page/<%= page_next %>">Next</a></div>
         </div>
         <div class="characters_container">
-                <% disneyCharacters.forEach(e => { %>
+                <% disneyCharacters.forEach(e => { %> 
                     <div class="characterWindow">        
                         <img src="<%=e.imageUrl%>"  class="characterImage">
                         <div class="characterInfo"><%= e.name %></div>
                     </div>
                 <% }) %>
             
+        </div>
+        <div class="main_element2">
+            <div class="navButton"><a href="/page/<%= page_prev %>">Previous</a></div>
+            <div class="pageCount">Page: <%= page%></div>
+            <div class="navButton"><a href="/page/<%= page_next %>">Next</a></div>
         </div>
     </main>   
     <footer class="footer_container"> 
